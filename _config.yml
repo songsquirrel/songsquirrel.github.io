@@ -1,60 +1,56 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole site, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing these this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+title: Your awesome title
+author: GitHub User
+email: your-email@domain.com
+description: > # this means to ignore newlines until "show_exerpts:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+show_excerpts: true # set to true to show excerpts on the homepage
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: 松
-description: 因缘而遇，当为良人
-baseurl: "/karama" # the subpath of your site, e.g. /blog
-url: "https://songsquirrel.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+sass:
+  sass_dir: _sass
+plainwhite:
+  name: Adam Denisov
+  tagline: Developer. Designer
+  date_format: "%b %-d, %Y"
+  sitemap: true # set to true to generate sitemap.xml content
 
-permalink: pretty
-exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
+  # generate social links in footer
+  social_links:
+    twitter: thelehhman
+    github:  thelehhman
+    linkedIn: in/thelehhman
+    rss: rss
+    # dribbble: jekyll
+    # facebook: jekyll
+    # flickr:   jekyll
+    # instagram: jekyll
+    # linkedin: jekyll
+    # pinterest: jekyll
+    # youtube: jekyll
+    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
+    # youtube_channel_name: CloudCannon
+    # telegram: jekyll
+    # googleplus: +jekyll
+    # microdotblog: jekyll
 
-# Set a path/url to a logo that will be displayed instead of the title
-#logo: "/assets/images/just-the-docs.png"
+    # Mastodon instances
+    # mastodon:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
 
-# Enable or disable the site search
-search_enabled: true
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+#header_pages:
+# - about.md
 
-# Set the search token separator for hyphenated-word search:
-search_tokenizer_separator: /[\s/]+/
-
-# Enable or disable heading anchors
-heading_anchors: true
-
-# Aux links for the upper right navigation
-aux_links:
-  "Just the Docs on GitHub":
-    - "//github.com/pmarsceill/just-the-docs"
-
-# Footer content appears at the bottom of every page's main content
-footer_content: "Copyright &copy; 2017-2019 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
-
-# Color scheme currently only supports "dark" or nil (default)
-color_scheme: nil
-
-# Google Analytics Tracking (optional)
-# e.g, UA-1234567-89
-ga_tracking: UA-2709176-10
+# Build settings
+theme: plainwhite
 
 plugins:
   - jekyll-seo-tag
-
-compress_html:
-  clippings: all
-  comments: all
-  endings: all
-  startings: []
-  blanklines: false
-  profile: false
+#  - jekyll-feed

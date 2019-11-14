@@ -1,28 +1,30 @@
-<p align="right">
-    <a href="https://badge.fury.io/rb/just-the-docs"><img src="https://badge.fury.io/rb/just-the-docs.svg" alt="Gem version"></a> <a href="https://github.com/pmarsceill/just-the-docs/actions"><img src="https://github.com/pmarsceill/just-the-docs/workflows/CI/badge.svg" alt="Build status"></a>
-</p>
-<br><br>
-<p align="center">
-    <h1 align="center">Just the Docs</h1>
-    <p align="center">A modern, highly customizable, and responsive Jekyll theme for documentation with built-in search.<br>Easily hosted on GitHub Pages with few dependencies.</p>
-    <p align="center"><strong><a href="https://pmarsceill.github.io/just-the-docs/">See it in action!</a></strong></p>
-    <br><br><br>
-</p>
+# plainwhite
 
-![jtd](https://user-images.githubusercontent.com/896475/47384541-89053c80-d6d5-11e8-98dc-dba16e192de9.gif)
+Simplistic jekyll portfolio-style theme for writers.
 
+**Demo**: [thelehhman.com](https://thelehhman.com)
+
+![plainwhite theme preview](/screenshot.png)
+
+
+## Installation on Github Pages
+
+Add this line to your site's `_config.yml`:
+```yaml
+remote_theme: thelehhman/plainwhite-jekyll
+```
 ## Installation
 
-Add this line to your Jekyll site's Gemfile:
+Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "just-the-docs"
+gem "plainwhite"
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: just-the-docs
+theme: plainwhite
 ```
 
 And then execute:
@@ -31,38 +33,81 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install just-the-docs
+    $ gem install plainwhite
 
 ## Usage
 
-[View the documentation](https://pmarsceill.github.io/just-the-docs/) for usage information.
+The "plainwhite" key in _config.yml is used to customize the theme data.
+```yaml
+plainwhite:
+  name: Adam Denisov
+  tagline: Developer. Designer
+  date_format: "%b %-d, %Y"
+
+  social_links:
+    twitter: thelehhman
+    github:  thelehhman
+    linkedIn: in/thelehhman # format: locale/username
+```
+
+**Updating Placeholder Image**
+
+The placeholder portfolio image can be replaced by the desired image by placing it as `assets/portfolio.png` in your jekyll website.
+
+**Comments (Disqus)**
+
+Comments on posts can be enabled by specifying your disqus_shortname under plainwhite in `_config.yml`. For example,
+```yaml
+plainwhite:
+  disqus_shortname: games
+```
+
+**Google Analytics**
+
+It can be enabled by specifying your analytics id under plainwhite in `_config.yml`
+```yaml
+plainwhite:
+  analytics_id: '< YOUR ID >'
+```
+
+**Sitemap**
+
+It can be toggled by the following line to under plainwhite in  `_config.yml`
+
+```yaml
+plainwhite:
+  sitemap: true
+```
+
+**Excerpts**
+
+Excerpts can be enabled by adding the following line to your `_config.yml`
+```yaml
+show_excerpts: true
+```
+**Layouts**
+
+- Home
+- Page
+- Post
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/pmarsceill/just-the-docs. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-### Submitting code changes:
-
-- Open a [Pull Request](https://github.com/pmarsceill/just-the-docs/pulls)
-- Ensure all CI tests pass
-- Await code review
-- Bump the version number in `just-the-docs.gemspec` and `package.json` according to [semantic versioning](https://semver.org/).
-
-### Design and development principles of this theme:
-
-1. As few dependencies as possible
-2. No build script needed
-3. First class mobile experience
-4. Make the content shine
+Bug reports and pull requests are welcome on GitHub at https://github.com/thelehhman/plainwhite-jekyll. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 
 To set up your environment to develop this theme, run `bundle install`.
 
-Your theme is set up just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
-When the theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
+When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
+To add a custom directory to your theme-gem, please edit the regexp in `plainwhite.gemspec` accordingly.
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## More themes
+
+- [Texture](https://github.com/thelehhman/texture)
