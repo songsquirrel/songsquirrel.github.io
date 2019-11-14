@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title:松
-description: 因缘而遇，当为良人
+description: 因缘而遇, 当为良人
 baseurl: "/karama" # the subpath of your site, e.g. /blog
 url: "https://songsquirrel.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
