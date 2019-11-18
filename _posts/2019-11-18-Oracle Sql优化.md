@@ -20,7 +20,7 @@ tags: Oracle
 6. 适当建立索引:
 > 索引分类: b-tree索引, bitmap位图索引, 函数索引 (hash索引)
 > 建立索引语句:
-```sql
+``` sql
 create[unique]|[bitmap] index index_name --UNIQUE表示唯一索引、BITMAP位图索引
 on table_name(column1,column2...|[express])--express表示函数索引
 [tablespace tab_name] --tablespace表示索引存储的表空间
@@ -37,7 +37,7 @@ on table_name(column1,column2...|[express])--express表示函数索引
 7. 建立分区表
 > 当数据库中表数据量达到一定程度, 影响系统运行效率, 可以考虑对表进行分区:
 > 分区语法:
-```sql
+``` sql
 create table STUDENT.SCORE
 (
   scoreid  VARCHAR2(18) not null,
