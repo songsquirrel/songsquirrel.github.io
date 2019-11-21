@@ -19,7 +19,7 @@ tags: Oracle
 > 转而执行全表扫描。
 6. 适当建立索引:
 > 索引分类: b-tree索引, bitmap位图索引, 函数索引 (hash索引)
-> 建立索引语句:
+> 建立索引语句: 
 ``` sql
 create[unique]|[bitmap] index index_name --UNIQUE表示唯一索引、BITMAP位图索引
 on table_name(column1,column2...|[express])--express表示函数索引
@@ -30,8 +30,7 @@ on table_name(column1,column2...|[express])--express表示函数索引
     initial 64K  --初始64k
     next 1M
     minextents 1
-    maxextents unlimited
- 
+    maxextents unlimited  
 )];
 ```
 7. 建立分区表
